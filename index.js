@@ -250,7 +250,6 @@ client.on('group-participants-update', async (anu) => {
 			const groupDesc = isGroup ? groupMetadata.desc : ''
             const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
             const isRegistered = checkRegisteredUser(sender)
-            const isDetectorOn = isGroup ? _antilink.includes(groupId) : false
             const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
             const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
 			const isGroupAdmins = groupAdmins.includes(sender) || false
