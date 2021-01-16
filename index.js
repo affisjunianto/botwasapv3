@@ -40,7 +40,6 @@ blocked = []
 /*********** LOAD FILE ***********/
 const _leveling = JSON.parse(fs.readFileSync('./database/group/leveling.json'))
 const _level = JSON.parse(fs.readFileSync('./database/user/level.json'))
-const _antilink = JSON.parse(fs.readFileSync('./database/group/antilink.json'))
 const _registered = JSON.parse(fs.readFileSync('./database/bot/registered.json'))
 const welkom = JSON.parse(fs.readFileSync('./database/bot/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/bot/nsfw.json'))
