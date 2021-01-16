@@ -225,7 +225,6 @@ client.on('group-participants-update', async (anu) => {
 			const from = mek.key.remoteJid
 			const type = Object.keys(mek.message)[0]
 			const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
-            const chats = (type === 'TextMessage') ? body : ((type === 'imageMessage' || type === 'videoMessage')) ? mek.message.extendedTextMessage.text : ''
 			const time = moment.tz('Asia/Jakarta').format('DD/MM HH:mm:ss')
 			const timu = moment(time * 1000).format('DD/MM/YYYY');
             const timi = moment(time * 1000).add(30, 'days').calendar();
