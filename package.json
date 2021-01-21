@@ -29,6 +29,7 @@
     "axios": "^0.21.0",
     "cfonts": "^2.9.0",
     "dotenv": "^8.2.0",
+    "brainly-scraper": "^1.0.3",
     "escape-string-regexp": "^1.0.5",
     "fake-useragent": "^1.0.1",
     "fluent-ffmpeg": "^2.1.2",
