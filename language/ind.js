@@ -170,6 +170,11 @@ exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp
 ╠☞ *${prefix}resepmasakan*
 ╠☞ *${prefix}igstalk*
 ║
+╠══─⊱ ❰ *LIMIT MENU* ❱ ⊰─═══➤
+╠☞ *${prefix}limit*
+╠☞ *${prefix}buylimit*
+╠☞ *${prefix}dompet*
+║
 ╠══─⊱ ❰ *NSFW MENU* ❱ ⊰─═══➤
 ╠☞ *${prefix}pokemon*
 ╠☞ *${prefix}anjing*
