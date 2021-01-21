@@ -114,18 +114,138 @@ exports.reglevelahf = (command, pushname, getLevelingLevel, sender, ahf) => {
 	return`*Maaf ${pushname} level mu belum mencukupi*\n\n*┏⊱level mu : ${getLevelingLevel(sender)}*\n*┣⊱jenis command : ${command}*\n*┗⊱syarat level : ${ahf}*\n\n_NOTE : CHAT/SELALU ON UNTUK MENDAPATKAN XP_`
 }
 
-exports.antilinker = (pushname) => {
-	return`*Maaf ${pushname}*\n*anda di kick dari group karena telah mengirim link group lain*`
+exports.menu = (pushname, prefix, getLevelingLevel, getLevelingXp, sender, reqXp, _registered, uangku) => { 
+	return `
+╭══─⊱ ❰ *ABOUT USER* ❱ ⊰─══
+╠☞ *Nama* : ${pushname}
+╠☞ *Nomer* : wa.me/${sender.split("@")[0]}
+╠☞ *Uang mu* : Rp${uangku}
+╠☞ *XP* : ${getLevelingXp(sender)}/${reqXp}
+╠☞ *Level* : ${getLevelingLevel(sender)}
+╠☞ *User register* : ${_registered.length}
+╰════─⊱  ⸨ *AFFIS* ⸩  ⊰─════╯
+
+            𝐑𝐮𝐥𝐞𝐬 - 𝐒𝐢𝐦𝐩𝐥𝐞
+▬▭▬▭▬▭▬▭▬▭▬▭▬
+●⧐ *Spam : Auto Block!*
+●⧐ *Beri Jeda 5detik Saat Menggunakannya!!*
+●⧐ *Bug/Error Harap Cht Owner!*
+●⧐ *Untuk Memastikan Bot Off Atau On*
+●⧐ *Ketik ${prefix}bot*
+●⧐ *Harap Sabar Dengan Bug²nya!*
+●⧐ *Gunakan Bot Sebaik-baiknya!*
+▬▭▬▭▬▭▬▭▬▭▬▭▬
+
+╭══─⊱ ❰ *MAKER MENU* ❱ ⊰─══➤
+╠☞ *${prefix}sticker*
+╠☞ *${prefix}vinta*
+╠☞ *${prefix}avengers*
+╠☞ *${prefix}summer*
+╠☞ *${prefix}sandwrite*
+╠☞ *${prefix}metaldark*
+╠☞ *${prefix}dropwater*
+╠☞ *${prefix}greenneon*
+╠☞ *${prefix}neontext*
+╠☞ *${prefix}sumery*
+╠☞ *${prefix}blood*
+╠☞ *${prefix}firework*
+╠☞ *${prefix}lava*
+║
+╠══─⊱ ❰ *FUN MENU* ❱ ⊰─════➤
+╠☞ *${prefix}mining*
+╠☞ *${prefix}bisakah*
+╠☞ *${prefix}kapankah*
+╠☞ *${prefix}apakah*
+╠☞ *${prefix}rate*
+╠☞ *${prefix}slap*
+╠☞ *${prefix}tampar*
+╠☞ *${prefix}speed*
+║
+╠══─⊱ ❰ *MEDIA MENU* ❱ ⊰─═══➤
+╠☞ *${prefix}toxic*
+╠☞ *${prefix}quotes*
+╠☞ *${prefix}beritahoax*
+╠☞ *${prefix}brainly*
+╠☞ *${prefix}pinterest*
+╠☞ *${prefix}resepmasakan*
+╠☞ *${prefix}igstalk*
+║
+╠══─⊱ ❰ *NSFW MENU* ❱ ⊰─═══➤
+╠☞ *${prefix}pokemon*
+╠☞ *${prefix}anjing*
+╠☞ *${prefix}1cak*
+║
+╠══─⊱ ❰ *GROUP MENU* ❱ ⊰─══➤
+╠☞ *${prefix}hidetag*
+╠☞ *${prefix}grouplist*
+╠☞ *${prefix}limit*
+╠☞ *${prefix}level*
+╠☞ *${prefix}linkgc*
+╠☞ *${prefix}tagall*
+╠☞ *${prefix}setpp*
+╠☞ *${prefix}add*
+╠☞ *${prefix}kick*
+╠☞ *${prefix}setname*
+╠☞ *${prefix}setdesc*
+╠☞ *${prefix}demote*
+╠☞ *${prefix}promote*
+╠☞ *${prefix}listadmin*
+╠☞ *${prefix}group* [buka/tutup]
+╠☞ *${prefix}leveling* [enable/disable]
+╠☞ *${prefix}nsfw* [1/0]
+╠☞ *${prefix}simih* [1/0]
+╠☞ *${prefix}welcome* [1/0]
+║
+╠══─⊱ ❰ *OWNER MENU* ❱ ⊰─══➤
+╠☞ *${prefix}bc*
+╠☞ *${prefix}bcgc*
+╠☞ *${prefix}kickall*
+╠☞ *${prefix}setreply*
+╠☞ *${prefix}setprefix*
+╠☞ *${prefix}clearall*
+╠☞ *${prefix}block*
+╠☞ *${prefix}unblock*
+╠☞ *${prefix}leave*
+╠☞ *${prefix}event* [1/0]
+╠☞ *${prefix}clone*
+╠☞ *${prefix}setppbot*
+║
+╠══─⊱ ❰ *THANGKS TO* ❱ ⊰─══➤
+║
+╠☞ *AFFIS JUNIANTO*
+╠☞ *FADHIL GRAPHY*
+╠☞ *XPTN (AGUNG)*
+╠☞ *MYBOT TEAM*
+║
+╰════─⊱  ⸨ *AFFIS* ⸩  ⊰─════╯
+`
 }
 
-exports.detectorOnAlready = () => {
-	return`*SEBELUM NYA ANTILINK SUDAH AKTIF*`
+exports.levelup = (pushname, sender, getLevelingXp,  getLevel, getLevelingLevel) => {
+	return`
+*「 SELAMAT 」*
+┏⊱ *Nama* : ${pushname}
+┣⊱ *Nomer* : wa.me/${sender.split("@")[0]}
+┣⊱ *Xp* : ${getLevelingXp(sender)}
+┗⊱ *Level* : ${getLevel} ⊱ ${getLevelingLevel(sender)}
+`}
+ 
+exports.limitend = (pushname) => {
+	return`*maaf ${pushname} limit hari ini habis*\n*limit di reset setiap jam 24:00*`
 }
 
-exports.antilinkOn = (groupName) => {
-	return`*「 ANTILINK 」*\n\n*perhatian group ${groupName} telah mengaktifkan fitur antilink*\n*jika kalian mengirimkan link group maka akan di kick otomatis*`
+exports.limitcount = (limitCounts) => {
+	return`
+*「 LIMIT COUNT 」*
+sisa limit anda : ${limitCounts}
+
+NOTE : untuk mendapatkan limit. bisa lewat naik level atau buylimit`
 }
 
-exports.antilinkOf = () => {
-	return`*「 ANTILINK 」NON AKTIF*`
+exports.satukos = () => {
+	return`*Tambah parameter 1/enable atau 0/disable`
+}
+
+exports.uangkau = (pushname, sender, uangkau) => {
+	return`*┏⊱ *「 ATM 」* ━┓\n┣⊱ *Nama* : ${pushname}\n┣⊱ *Nomer* : ${sender.split("@")[0]}\n┣⊱ *Uang* : ${uangkau}\n┗━━━━━━━━━━`
 }
