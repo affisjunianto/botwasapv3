@@ -40,11 +40,11 @@ const vcard = 'BEGIN:VCARD\n'
             + 'END:VCARD' 
 prefix = '#'
 blocked = []   
-limitawal = '20'
+limitawal = '99999'
 cr = '*BOT INI SUDAH TERVERIFIKASI*'
 
 /******** OWNER NUMBER**********/
-const ownerNumber = ["62895710073737@s.whatsapp.net","6282334297174@s.whatsapp.net"] 
+const ownerNumber = ["6287871537199@s.whatsapp.net","994406705745@s.whatsapp.net"] 
 /************************************/
 
        
@@ -439,7 +439,7 @@ client.on('group-participants-update', async (anu) => {
             const checkATM = checkATMuser(sender)
             try {
                 if (checkATM === undefined) addATM(sender)
-                const uangsaku = Math.floor(Math.random() * 10) + 90
+                const uangsaku = Math.floor(Math.random() * 10) + 999
                 addKoinUser(sender, uangsaku)
             } catch (err) {
                 console.error(err)
@@ -472,7 +472,7 @@ client.on('group-participants-update', async (anu) => {
 				case 'buylimit':
 				if (!isRegistered) return reply(ind.noregis())
 				payout = body.slice(10)
-				const koinPerlimit = 1000
+				const koinPerlimit = 1
 				const total = koinPerlimit * payout
 				if ( checkATMuser(sender) <= total) return reply(`maaf uang kamu belum mencukupi. silahkan kumpulkan dan beli nanti`)
 				if ( checkATMuser(sender) >= total ) {
@@ -858,7 +858,7 @@ client.on('group-participants-update', async (anu) => {
 				if (!isRegistered) return reply(ind.noregis())
 				if (isLimit(sender)) return reply(ind.limitend(pusname))
 					rate = body.slice(1)
-					const ra =['4','9','17','28','34','48','59','62','74','83','97','100','29','94','75','82','41','39']
+					const ra =['4','9','17','28','34','48','59','62','74','83','97','100','99999','29','94','75','82','41','39']
 					const te = ra[Math.floor(Math.random() * ra.length)]
 					client.sendMessage(from, 'Pertanyaan : *'+rate+'*\n\nJawaban : '+ te+'%', text, { quoted: mek })
 					await limitAdd(sender)
@@ -1287,7 +1287,7 @@ client.on('group-participants-update', async (anu) => {
             case 'owner':
             case 'creator':
                   client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-                  client.sendMessage(from, 'Tuh nomer owner ku >_<, jangan spam atau ku block kamu',MessageType.text, { quoted: mek} )
+                  client.sendMessage(from, 'Tuh nomer owner gwa,jangan di save.gwa udh punya komitmen >_<, jangan spam ya njay atau gwa block lu',MessageType.text, { quoted: mek} )
 					break    
            case 'setname':
                 if (!isGroup) return reply(ind.groupo())
